@@ -20,7 +20,7 @@ def get_last_row_data(sheet_name, column_names):
     try:
         # Load credentials from the JSON file
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name("actual-flow-data-7a129f577d25.json", scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name("api", scope)
         client = gspread.authorize(creds)
 
         # Open the specified sheet
